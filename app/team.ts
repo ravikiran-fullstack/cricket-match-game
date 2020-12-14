@@ -20,7 +20,7 @@ export class Team {
       teamScoreColumn.setAttribute('class', 'col-md-4 text-center p-3');
 
         const div = document.createElement('div');
-          div.innerHTML = `${this.teamName}Score`;
+          div.innerHTML = `${this.teamName}`;
         const p = document.createElement('p');
           p.setAttribute('id', `${this.teamName}Score`);
           p.innerHTML = '0';
@@ -197,17 +197,17 @@ export class Team {
   clearTimerInterval(){
     const timer = document.getElementById('timer');
       if(timer){
-        timer.innerHTML = ''+0;
+        timer.innerHTML = ''+60;
       }
     clearInterval(this.gameTimer);  
   };
   
   startTimerInterval(){
-    let seconds = 1;
+    let seconds = 60;
     this.gameTimer = setInterval(() => {
       const timer = document.getElementById('timer');
       if(timer){
-        timer.innerHTML = ''+seconds++;
+        timer.innerHTML = ''+--seconds;
       }
     }, 1000);
   }

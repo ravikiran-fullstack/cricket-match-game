@@ -42,14 +42,13 @@ export class Game{
           timerTitle.innerHTML = 'Timer';
         const timerValue= document.createElement('p');
           timerValue.setAttribute('id', 'timer'); 
-          timerValue.innerHTML = '0'; 
+          timerValue.innerHTML = '60'; 
       timerColumn.append(timerTitle, timerValue);    
       document.getElementById('teamsScoreRow')?.append(timerColumn);
 
       const resultsColumn = document.createElement('div');
         resultsColumn.setAttribute('class', 'col-md-2 text-center p-3');
         resultsColumn.setAttribute('id', 'resultsColumn');
-        resultsColumn.innerHTML = 'Results'
 
         const resultsGenerateBtn = document.createElement('button');
         resultsGenerateBtn.setAttribute('id', 'resultsGenerateBtn');
